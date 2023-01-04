@@ -1192,7 +1192,7 @@ start_menu() {
     stty erase '^H' && read -p "Reboot to apply ? [Y/n] :" yn
   [ -z "${yn}" ] && yn="y"
   if [[ $yn == [Yy] ]]; then
-    echo -e "${Info} VPS reboots in 5s..."
+    echo -e "${Info} VPS will reboot in the next 5 seconds, Cancel: Ctrl + C . . . . ."
     sleep 5s
     reboot
   fi
