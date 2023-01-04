@@ -573,7 +573,7 @@ installTools() {
 		pgrep -f apt | xargs kill -9
 	fi
 
-	echoContent green " ---> Checking and installing updates [if you are using a fresh vps it will be very slow, if there is no update for a long time, please stop it manually 'ctrl + C' and execute the script it again]"
+	echoContent green " ---> Checking and installing updates [if you are using a fresh vps it will be very slow, if there is no update for a long time, please stop it manually 'ctrl + C' and execute the script again]"
 
 	${upgrade} >/etc/v2ray-agent/install.log 2>&1
 	if grep <"/etc/v2ray-agent/install.log" -q "changed"; then
@@ -3036,10 +3036,16 @@ customCDNIP() {
 	echoContent red "\nIf you don't know about the optimization, please pass this step and press Enter instead"
 	echoContent yellow "\n 1.MCCI / Taliya - CloudFlare: 104.19.223.39"
 	echoContent yellow " 2.CloudFlare: 23.227.39.83"
-	echoContent yellow " 3.ArvanCloud: snapp.ir"
-	echoContent yellow " 4.ArvanCloud: 185.143.233.120"
-	echoContent yellow " 5.ArvanCloud: arvancloud.ir"
-	echoContent yellow " 6.ArvanCloud: 185.143.235.205"
+	echoContent yellow " 3.Snapp!: snapp.ir [Recommended]"
+	echoContent yellow " 4.ArvanCloud: arvancloud.ir [Recommended]"
+	echoContent yellow " 5.ArvanCloud: panel.arvancloud.ir"
+	echoContent yellow " 6.AIOnet: aionet.ir [Recommended]"
+    echoContent yellow " 7.Yektanet: yektanet.com"
+	echoContent yellow " 8.ArvanCloud: abplus.ir (AyandehBank)"
+    echoContent yellow " 9.Ministry of Energy: moe.gov.ir [Known as sulfur oxide producer]"
+	echoContent yellow " 10.ArvanCloud: women.gov.ir [Not the betternet for sure I mean :))) ]"
+	echoContent yellow " 11.Tiwall: tiwall.com [Recommended]"
+
 	echoContent skyBlue "----------------------------"
 	read -r -p "Please select [Enter not used]:" selectCDNType
 	case ${selectCDNType} in
@@ -3052,14 +3058,29 @@ customCDNIP() {
 	3)
 		add="snapp.ir"
 		;;
-	3)
-		add="185.143.233.120"
-		;;
-	3)
+	4)
 		add="arvancloud.ir"
 		;;
-	3)
-		add="185.143.235.205"
+	5)
+		add="panel.arvancloud.ir"
+		;;
+	6)
+		add="aionet.ir"
+		;;
+	7)
+		add="yektanet.com"
+		;;
+	8)
+		add="abplus.ir"
+		;;
+	9)
+		add="moe.gov.ir"
+		;;
+	10)
+		add="women.gov.ir"
+		;;
+	11)
+		add="tiwall.com"
 		;;
 	*)
 		add="${domain}"
