@@ -3982,7 +3982,7 @@ bbrInstall() {
 	echoContent red "=============================================================="
 	read -r -p "Please select:" installBBRStatus
 	if [[ "${installBBRStatus}" == "1" ]]; then
-		wget -N --no-check-certificate "https://raw.githubusercontent.com/hostcr1/v2ray-agent/master/shell/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+		wget -N --no-check-certificate "https://raw.githubusercontent.com/hostcr1/v2ray-agent/main/shell/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 	else
 		menu
 	fi
