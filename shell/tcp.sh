@@ -1189,89 +1189,13 @@ start_menu() {
 
   fi
   echo -e " The current congestion control algorithm is: ${Green_font_prefix}${net_congestion_control}${Font_color_suffix} The current queue algorithm is: ${Green_font_prefix}${net_qdisc}${Font_color_suffix} "
-
-  read -p " Choose the number in menu :" num
-  case "$num" in
-  0)
-    Update_Shell
-    ;;
-  1)
-    check_sys_bbr
-    ;;
-  2)
-    check_sys_bbrplus
-    ;;
-  3)
-    check_sys_Lotsever
-    ;;
-  5)
-    check_sys_bbrplusnew
-    ;;
-  6)
-    check_sys_xanmod
-    ;;
-  9)
-    gototcpx
-    ;;
-  10)
-    gotodd
-    ;;
-  11)
-    startbbrfq
-    ;;
-  12)
-    startbbrfqpie
-    ;;
-  13)
-    startbbrcake
-    ;;
-  14)
-    startbbr2fq
-    ;;
-  15)
-    startbbr2fqpie
-    ;;
-  16)
-    startbbr2cake
-    ;;
-  17)
-    startecn
-    ;;
-  18)
-    closeecn
-    ;;
-  19)
-    startbbrplus
-    ;;
-  20)
-    startlotserver
-    ;;
-  21)
-    optimizing_system
-    ;;
-  22)
-    optimizing_system_johnrosen1
-    ;;
-  23)
-    closeipv6
-    ;;
-  24)
-    openipv6
-    ;;
-  25)
-    remove_all
-    ;;
-  26)
-    optimizing_ddcc
-    ;;
-  99)
-    exit 1
-    ;;
-  *)
-    clear
-    echo -e "${Error}:Please enter the correct number [0-99]"
+    stty erase '^H' && read -p "Reboot to apply ? [Y/n] :" yn
+  [ -z "${yn}" ] && yn="y"
+  if [[ $yn == [Yy] ]]; then
+    echo -e "${Info} VPS reboots in 5s..."
     sleep 5s
-    start_menu
+    reboot
+  fi
     ;;
   esac
 }
