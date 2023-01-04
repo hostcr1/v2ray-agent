@@ -1195,8 +1195,6 @@ start_menu() {
     sleep 5s
     reboot
   fi
-    ;;
-  esac
 }
 #############内核管理组件#############
 
