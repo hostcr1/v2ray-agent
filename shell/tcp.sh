@@ -1178,10 +1178,10 @@ net.ipv6.conf.default.accept_ra = 2" >>/etc/sysctl.d/99-sysctl.conf
 
 start_menu() {
   clear
-startbbrfq
-check_status
+  startbbrfq
+  check_status
   get_system_info
-  echo -e " System Information: ${Font_color_suffix}$opsy ${Green_font_prefix}$virtual${Font_color_suffix} $arch ${Green_font_prefix}$kern${Font_color_suffix} "
+  echo && echo -e " System Information: ${Font_color_suffix}$opsy ${Green_font_prefix}$virtual${Font_color_suffix} $arch ${Green_font_prefix}$kern${Font_color_suffix} "
   if [[ ${kernel_status} == "noinstall" ]]; then
     echo -e " Current status: ${Green_font_prefix}Not Installed${Font_color_suffix} Accelerated core ${Red_font_prefix}Please install the kernel first${Font_color_suffix}"
   else
