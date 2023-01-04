@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# detection area
+# Def
 #----------------------------------------------------
 # check system
 export LANG=en_US.UTF-8
