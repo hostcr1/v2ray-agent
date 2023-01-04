@@ -1176,7 +1176,6 @@ net.ipv6.conf.default.accept_ra = 2" >>/etc/sysctl.d/99-sysctl.conf
   echo -e "${Info}开启IPv6结束，可能需要重启！"
 }
 
-#开始菜单
 start_menu() {
   clear
 startbbrfq
@@ -1186,7 +1185,7 @@ check_status
   if [[ ${kernel_status} == "noinstall" ]]; then
     echo -e " Current status: ${Green_font_prefix}Not Installed${Font_color_suffix} Accelerated core ${Red_font_prefix}Please install the kernel first${Font_color_suffix}"
   else
-    echo -e " Current status:: ${Green_font_prefix}Installed${Font_color_suffix} ${Red_font_prefix}${kernel_status}${Font_color_suffix} Accelerated core , ${Green_font_prefix}${run_status}${Font_color_suffix}"
+    echo -e " Current status: ${Green_font_prefix}Installed${Font_color_suffix} ${Red_font_prefix}${kernel_status}${Font_color_suffix} Accelerated core , ${Green_font_prefix}${run_status}${Font_color_suffix}"
 
   fi
   echo -e " The current congestion control algorithm is: ${Green_font_prefix}${net_congestion_control}${Font_color_suffix} The current queue algorithm is: ${Green_font_prefix}${net_qdisc}${Font_color_suffix} "
