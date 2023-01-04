@@ -1186,7 +1186,6 @@ start_menu() {
     echo -e " Current status: ${Green_font_prefix}Not Installed${Font_color_suffix} Accelerated core ${Red_font_prefix}Please install the kernel first${Font_color_suffix}"
   else
     echo -e " Current status: ${Green_font_prefix}Installed${Font_color_suffix} ${Red_font_prefix}${kernel_status}${Font_color_suffix} Accelerated core , ${Green_font_prefix}${run_status}${Font_color_suffix}"
-
   fi
   echo -e " The current congestion control algorithm is: ${Green_font_prefix}${net_congestion_control}${Font_color_suffix} The current queue algorithm is: ${Green_font_prefix}${net_qdisc}${Font_color_suffix} "
     stty erase '^H' && read -p "Reboot to apply ? [Y/n] :" yn
@@ -1196,6 +1195,8 @@ start_menu() {
     sleep 5s
     reboot
   fi
+    ;;
+  esac
 }
 #############内核管理组件#############
 
