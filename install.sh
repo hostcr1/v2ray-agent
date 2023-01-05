@@ -785,7 +785,7 @@ installWarp() {
 		sudo rpm -ivh "http://pkg.cloudflareclient.com/cloudflare-release-el${centosVersion}.rpm" >/dev/null 2>&1
 	fi
 
-	echoContent green " ---> install WARP"
+	echoContent green " ---> Installing WARP"
 	${installType} cloudflare-warp >/dev/null 2>&1
 	if [[ -z $(which warp-cli) ]]; then
 		echoContent red "---> Failed to install WARP"
@@ -3666,38 +3666,62 @@ updateV2RayCDN() {
 	echoContent skyBlue "\nProgress $1/${totalProgress} : Modify CDN node"
 
 	if [[ -n "${currentAdd}" ]]; then
-		echoContent red "=============================================================="
-	    echoContent yellow "\n 1.MCCI / Taliya - CloudFlare: 104.19.223.39"
-     	echoContent yellow " 2.CloudFlare: 23.227.39.83"
-	    echoContent yellow " 3.ArvanCloud: snapp.ir"
-     	echoContent yellow " 4.ArvanCloud: 185.143.233.120" 
-     	echoContent yellow " 5.ArvanCloud: arvancloud.ir"
-     	echoContent yellow " 6.ArvanCloud: 185.143.235.205"
-		echoContent yellow "7.Custom CDN: IP / Domain"
-		echoContent red "=============================================================="
+	echoContent red "=============================================================="
+	echoContent yellow "# Notes"
+	echoContent yellow "\nTutorial address:"
+	echoContent skyBlue "https://github.com/hostcr1/v2ray-agent/blob/master/documents/optimize_V2Ray.md"
+	echoContent red "\nIf you don't know about the optimization, please pass this step and press Enter instead"
+	echoContent yellow "\n 1.MCCI / Taliya - CloudFlare: 104.19.223.39"
+	echoContent yellow " 2.CloudFlare: 23.227.39.83"
+	echoContent yellow " 3.Snapp!: snapp.ir [Recommended]"
+	echoContent yellow " 4.ArvanCloud: arvancloud.ir [Recommended]"
+	echoContent yellow " 5.ArvanCloud: panel.arvancloud.ir"
+	echoContent yellow " 6.AIOnet: aionet.ir [Recommended]"
+    echoContent yellow " 7.Yektanet: yektanet.com"
+	echoContent yellow " 8.ArvanCloud: abplus.ir (AyandehBank)"
+    echoContent yellow " 9.Ministry of Energy: moe.gov.ir [Known as sulfur oxide producer]"
+	echoContent yellow " 10.ArvanCloud: women.gov.ir [Not the betternet for sure I mean :))) ]"
+	echoContent yellow " 11.Tiwall: tiwall.com [Recommended]"
+	echoContent yellow "12.Custom CDN: IP / Domain"
+	echoContent red "=============================================================="
 		read -r -p "Please select:" selectCDNType
 		case ${selectCDNType} in
-		1)
-			setDomain="104.19.223.39"
-			;;
-		2)
-			setDomain="23.227.39.83"
-			;;
-		3)
-			setDomain="snapp.ir"
-			;;
-		4)
-			setDomain="185.143.233.120"
-			;;
-		5)
-			setDomain="arvancloud.ir"
-			;;
-		6)
-			setDomain="185.143.235.205"
-			;;
-		7)
-			read -r -p "Please enter the CDN IP or domain name you want to customize:" setDomain
-			;;
+	1)
+		add="104.19.223.39"
+		;;
+	2)
+		add="23.227.39.83"
+		;;
+	3)
+		add="snapp.ir"
+		;;
+	4)
+		add="arvancloud.ir"
+		;;
+	5)
+		add="panel.arvancloud.ir"
+		;;
+	6)
+		add="aionet.ir"
+		;;
+	7)
+		add="yektanet.com"
+		;;
+	8)
+		add="abplus.ir"
+		;;
+	9)
+		add="moe.gov.ir"
+		;;
+	10)
+		add="women.gov.ir"
+		;;
+	11)
+		add="tiwall.com"
+		;;
+	12)
+		read -r -p "Please enter the CDN IP or domain name you want to customize:" setDomain
+		;;
 		esac
 
 		if [[ -n ${setDomain} ]]; then
@@ -3998,8 +4022,8 @@ handleFirewall() {
 bbrInstall() {
 	echoContent red "\n=============================================================="
 	echoContent green "The mature works of [ylx2016] for BBR and DD scripts, the address is [https://github.com/ylx2016/Linux-NetSpeed], please be familiar with it :))"
-	echoContent yellow "1.Installation script [recommended original BBR+FQ No. 11]"
-	echoContent yellow "2.Fallback home directory"
+	echoContent yellow "1.Install script [does the job and reboots the machine]"
+	echoContent yellow "2.Cancel"
 	echoContent red "=============================================================="
 	read -r -p "Please select:" installBBRStatus
 	if [[ "${installBBRStatus}" == "1" ]]; then
@@ -5447,7 +5471,7 @@ menu() {
 	echoContent skyBlue "-------------------------Version Management--------------------"
 	echoContent yellow "16.Core Management"
 	echoContent yellow "17.Update Script"
-	echoContent yellow "18.Install BBR and DD scripts"
+	echoContent yellow "18.Install BBR"
 	echoContent skyBlue "-------------------------Script management--------------------"
 	echoContent yellow "19.View log"
 	echoContent yellow "20.Uninstall script"
