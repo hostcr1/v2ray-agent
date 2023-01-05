@@ -4308,11 +4308,11 @@ blacklist() {
 	echoContent skyBlue "\nProgress $1/${totalProgress} : Geosite Category blacklist"
 	echoContent red "\n=============================================================="
 	echoContent red "\n If you want to restrict websites based on geosite category, this is the right place."
-	echoContent red "Block IR websites (Bank, Bourse, Insurances, media, news): category-ir"
+	echoContent red "Block IR websites (Bank, Bourse, Insurances, media, etc ...): category-ir"
 	echoContent red "Block IRI Banks: category-ir-bank"
 	echoContent red "Block Ads: category-ads-all"
 	echoContent red "\n Block Porn: category-porn"
-	echoContent yellow "1.Add Geosite Category to blacklist"
+	echoContent yellow "1.Add geosite category to blacklist"
 	echoContent yellow "2.Delete from blacklist"
 	echoContent red "=============================================================="
 	read -r -p "Please select:" blacklistStatus
