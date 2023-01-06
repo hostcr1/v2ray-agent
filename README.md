@@ -4,7 +4,7 @@
 # v2ray-agent
 
 
-- [Cloudflare / CDN Optimization Solution](https://github.com/panhuanghe/v2ray-agent/blob/main/docs/optimize_V2Ray.md)
+- [Cloudflare / CDN Optimization Solution](https://github.com/hostcr1/v2ray-agent/blob/main/docs/optimize_V2Ray.md)
 - **Please give a ⭐ support**
 
 * * * 
