@@ -26,6 +26,7 @@
 - Supports VLESS/Trojan prepending [VLESS XTLS -> Trojan XTLS], [Trojan XTLS -> VLESS XTLS]
 - Supports mutual reading of configuration files between different cores
 - Trojan+TCP+xtls-rprx-direct
+- Supports to generate subscription link to get all connection configurations
 - Supports Debian, Ubuntu, Centos and mainstream CPU architectures.
 - Supports to keep tls certificate after uninstalling the script 
 - Supports [WARP](https://1.1.1.1/), IPv6 [IPv6 note](https://github.com/hostcr1/v2ray-agent/blob/main/docs/ipv6_help.md)
@@ -67,19 +68,17 @@
 wget -P/root -N --no-check-certificate "https://raw.githubusercontent.com/hostcr1/v2ray-agent/main/install.sh" && chmod 700 /root/install.sh &&/root/install.sh
 ``` 
 
+## Client Applications
+* [V2rayN](https://github.com/2dust/v2rayN/releases/latest) for Windows
+* [V2RayX](https://github.com/Cenmrev/V2RayX/releases) for macOS
+* [NapsternetV](https://apps.apple.com/us/app/napsternetv/id1629465476) for iOS
+* [v2rayNG](https://github.com/2dust/v2rayNG) for Android
 
-# example image
+
+# Example image
 
 <img src="https://raw.githubusercontent.com/hostcr1/v2ray-agent/main/img/vasma.png" width=700>
 
 # licence
 
 [AGPL-3.0](https://github.com/hostcr1/v2ray-agent/blob/main/LICENSE)
-## Roadmap
-
-- Add the domain name in the 09_routing.json
-- Add suggested optimal routes
-- Add an inbound/outbound connection for the tunneling
-
-## Issues
-Feel free to open issues or ask questions, describe the problem with a screenshot and detailed configuration and what you are trying to do.
