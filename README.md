@@ -1,6 +1,7 @@
+> [اینجا به زبان فارسی](https://github.com/hostcr1/v2ray-agent/blob/main/docs/per_readme.md)
+
 # Original author: mack-a
 # Original project: https://github.com/mack-a/v2ray-agent
-
 # v2ray-agent
 
 
@@ -82,3 +83,11 @@ wget -P/root -N --no-check-certificate "https://raw.githubusercontent.com/hostcr
 # licence
 
 [AGPL-3.0](https://github.com/hostcr1/v2ray-agent/blob/main/LICENSE)
+## Roadmap
+
+- Add the domain name in the 09_routing.json
+- Add suggested optimal routes
+- Add an inbound/outbound connection for the tunneling
+
+## Issues
+Feel free to open issues or ask questions, describe the problem with a screenshot and detailed configuration and what you are trying to do.
