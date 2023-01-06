@@ -19,8 +19,6 @@
 
 # 1.Eight-in-one coexistence script + Fake Website
 
-- [Cloudflare Getting Started Tutorial (soon)](https://github.com/hostcr1/v2ray-agent/blob/main/docs/cloudflare_init.md)
-
 ## Features
 - Supports [Xray-core[XTLS]](https ://github.com/XTLS/Xray-core), [v2ray-core](https://github.com/v2fly/v2ray-core)
 - Supports VLESS/VMess/trojan protocol
@@ -68,6 +66,8 @@
 ``` 
 wget -P/root -N --no-check-certificate "https://raw.githubusercontent.com/hostcr1/v2ray-agent/main/install.sh" && chmod 700 /root/install.sh &&/root/install.sh
 ``` 
+- [Cloudflare Getting Started Tutorial (soon)](https://github.com/hostcr1/v2ray-agent/blob/main/docs/cloudflare_init.md)
+
 
 ## Client Applications
 * [V2rayN](https://github.com/2dust/v2rayN/releases/latest) for Windows
@@ -83,11 +83,3 @@ wget -P/root -N --no-check-certificate "https://raw.githubusercontent.com/hostcr
 # licence
 
 [AGPL-3.0](https://github.com/hostcr1/v2ray-agent/blob/main/LICENSE)
-## Roadmap
-
-- Add the domain name in the 09_routing.json
-- Add suggested optimal routes
-- Add an inbound/outbound connection for the tunneling
-
-## Issues
-Feel free to open issues or ask questions, describe the problem with a screenshot and detailed configuration and what you are trying to do.
